@@ -2,7 +2,7 @@ name: Hexo CI/CD
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
   schedule:
     # 每天 UTC 时间 0 点自动构建（可选）
     - cron: '0 0 * * *'
@@ -51,7 +51,7 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        DEPLOY_KEY: ${{ secrets.ACCESS_TOKEN_CRAFTWORKSHOP }}
         publish_dir: ./public
         publish_branch: gh-pages
         force_orphan: true  # 保持 gh-pages 分支清洁
