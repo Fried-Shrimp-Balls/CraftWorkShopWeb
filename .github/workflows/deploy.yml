@@ -1,11 +1,11 @@
 name: Hexo CI/CD
 
-on:
-  push:
-    branches: [ main ]
-  schedule:
-    # 每天 UTC 时间 0 点自动构建（可选）
-    - cron: '0 0 * * *'
+# on:
+#   push:
+#     branches: [ main ]
+#   schedule:
+#     # 每天 UTC 时间 0 点自动构建（可选）
+#     - cron: '0 0 * * *'
 
 env:
   NODE_VERSION: '18'
